@@ -112,8 +112,8 @@ function findSize() {
 
 // Konfigurasi alamat jaringan untuk terhubung dengan web service InEMS 
 // var IpAddress = '10.42.16.143'; /*Jika Online*/
-var IpAddress = '10.42.160.107'; /*Jika Online*/
-// var IpAddress = '127.0.0.1'; /*Jika Offline*/
+//var IpAddress = '10.42.160.107'; /*Jika Online*/
+ var IpAddress = '127.0.0.1'; /*Jika Offline*/
 var Url = 'http://' + IpAddress + ':8080/sampleWebService/REST/';
 
 // Variabel- variabel yang digunakan untuk login ke InEMS
