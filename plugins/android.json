@@ -1,0 +1,30 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.inems.android"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.inems.android"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.inems.android"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.inems.android"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.inems.android"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "com.inems.android"
+        }
+    },
+    "dependent_plugins": {}
+}

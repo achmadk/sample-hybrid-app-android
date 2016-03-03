@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#2196f3" />
+    <title>InEMS versi Mobile (Android)</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.material.min.css" />
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css" />
+    <link href="css/roboto.css" rel="stylesheet" type="text/css" />
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" type="text/css" href="css/material-icons.css" />
+    <link rel="stylesheet" href="css/my-app.css" />
+    <link rel="stylesheet" href="css/my-app.themes.css" />
+</head>
+
+<body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <!-- <div class="statusbar-overlay"></div> -->
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-reveal">
+        <div class="content-block">
+            <p>Right panel content goes here</p>
+        </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+        <!-- Put panels-overlay and left-panel with view inside of views-->
+        <!-- Panels overlay-->
+        <div class="panel-overlay"></div>
+        <!-- Login screen-->
+        <div class="login-screen modal-in">
+            <div class="view">
+                <div class="page">
+                    <div class="page-content login-screen-content">
+                        <div class="login-screen-title">Masuk ke InEMS</div>
+                        <div class="list-block">
+                            <div class="list-block-label">
+                                <i style="text-align: center">Silakan masuk untuk melanjutkan</i>
+                            </div>
+                        </div>
+                        <form id="login">
+                            <div class="list-block inputs-list">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">Nama pengguna</div>
+                                            <div class="item-input item-input-field">
+                                                <input type="text" name="username" placeholder="" autofocus="autofocus" required="required" />
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">Kata sandi</div>
+                                            <div class="item-input item-input-field">
+                                                <input type="password" name="password" placeholder="" required="required" />
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="content-block">
+                                <a href="#" id="link" class="button button-big">Masuk</a>
+                                <div class="list-block-label">
+                                    <p style="text-align: center">Hak cipta &#169; Universitas Gadjah Mada
+                                        <script>
+                                        document.write(new Date().getFullYear())
+                                        </script>
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Left panel with reveal effect-->
+        <div class="panel panel-left panel-cover">
+            <!-- Left view-->
+            <div class="view view-left navbar-fixed">
+                <div class="pages">
+                    <div data-page="index-left" class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <div class="left">
+                                    <a href="#" class="link close-panel"><i class="material-icons">&#xE5C4;</i></a>
+                                </div>
+                                <div class="center">Menu</div>
+                            </div>
+                        </div>
+                        <div class="page-content">
+                            <div class="content-block-title">Kotak Surat</div>
+                            <div class="list-block">
+                                <ul>
+                                    <li>
+                                        <a href="index.html" data-view=".view-main" class="item-link nav-link unread close-panel">
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title">Kotak Masuk</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="sentboxes.html" data-view=".view-main" class="item-link nav-link close-panel">
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title">Komponen Terkirim</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <div class="list-block">
+                                <ul>
+                                    <div class="accordion-list">
+                                        <li class="accordion-item accordion-item-expanded">
+                                            <a href="#" class="item-link">
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">Kotak Masuk</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="accordion-item-content">
+                                                <div class="list-block">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="index.html" data-view=".view-main" class="item-link nav-link close-panel unread">
+                                                                <div class="item-content">
+                                                                    <div class="item-inner" style="padding-left:1em;">
+                                                                        <div class="item-title">Surat Masuk</div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>
+                                                            <div data-view=".view-main" class="item-link nav-link close-panel">
+                                                                <div class="item-content">
+                                                                    <div class="item-inner" style="padding-left:1em;">
+                                                                        <div class="item-title">Surat Keluar</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <li>
+                                        <a href="sentboxes.html" data-view=".view-main" class="item-link nav-link close-panel">
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title">Surat Terkirim</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <div class="filters">
+                                <div class="content-block-title">Filter surat/nota dinas</div>
+                                <div class="list-block">
+                                    <ul>
+                                        <!-- <li>
+                                        <a href="#" data-view=".view-main" data-name="unread" class="item-link filter-link close-panel">
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title">Belum dibaca</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li> -->
+                                        <li>
+                                            <a href="#" data-view=".view-main" data-name="biasa" class="item-link filter-link close-panel">
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">Biasa</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-view=".view-main" data-name="segera" class="item-link filter-link close-panel">
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">Segera</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-view=".view-main" data-name="sangat" class="item-link filter-link close-panel">
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">Sangat segera</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-view=".view-main" data-name="rahasia" class="item-link filter-link close-panel">
+                                                <div class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">Rahasia</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="list-block">
+                                <ul>
+                                    <li>
+                                        <a href="about.html" data-view=".view-main" class="item-link nav-link close-panel">
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title">Tentang Aplikasi</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link close-panel open-login">
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title">Keluar</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Right view, it is main view-->
+        <div class="view view-main">
+            <div class="pages navbar-fixed">
+                <div data-page="index-1" class="page with-subnavbar">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a href="#" class="link open-panel" data-panel="left"><i class="material-icons">menu</i></a>
+                            </div>
+                            <div class="center">Surat Masuk</div>
+                        </div>
+                    </div>
+                    <!-- Search bar -->
+                    <form data-search-list=".list-block-search" data-search-in="a" class="searchbar searchbar-init">
+                        <div class="searchbar-input">
+                            <input name="search" type="search" placeholder="Cari surat masuk" />
+                            <a href="#" class="searchbar-clear"></a>
+                        </div>
+                    </form>
+                    <div class="speed-dial">
+                        <a href="#" class="floating-button color-lightgreen"><i class="material-icons">&#xE145;</i><i class="material-icons">&#xE5CD;</i></a>
+                        <div class="speed-dial-buttons">
+                            <a href="memo-form.html" class="color-lightgreen" data-force="true"><i class="material-icons">&#xE89c;</i></a>
+                            <a href="mail-form.html" class="color-lightgreen" data-force="true"><i class="material-icons">&#xE158;</i></a>
+                        </div>
+                    </div>
+                    <!-- Search bar overlay -->
+                    <div class="searchbar-overlay"></div>
+                    <!-- Scrollable page content-->
+                    <!-- <div class="page-content infinite-scroll"> -->
+                    <div class="page-content">
+                        <div class="content-block searchbar-not-found">
+                            <p>Tidak ditemukan pesan yang dicari</p>
+                        </div>
+                        <!-- <div class="list-block media-list disposition-in-list virtual-list list-block-search searchbar-found"></div> -->
+                        <div class="list-block media-list disposition-in-list list-block-search searchbar-found"></div>
+                        <!-- <div class="infinite-scroll-preloader">
+                            <div class="preloader"></div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/sha1.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/inbox.js"></script>
+    <script type="text/javascript" src="js/outbox.js"></script>
+    <script type="text/javascript" src="js/disposition.js"></script>
+    <script type="text/javascript" src="js/form.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<div class="pages navbar-fixed">
+    <div data-page="inboxes" class="page with-subnavbar">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="link open-panel" data-panel="left"><i class="material-icons">menu</i></a>
+                </div>
+                <!-- Search bar -->
+                <form data-search-list=".list-block-search" data-search-in=".item-subtitle" class="searchbar searchbar-init">
+                    <div class="searchbar-input">
+                        <input type="search" placeholder="Cari surat masuk" />
+                        <a href="#" class="searchbar-clear"></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <a href="mail-form.html" class="floating-button color-lightgreen" data-force="true"><i class="material-icons">&#xE145;</i></a>
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <!-- Search bar overlay -->
+            <div class="searchbar-overlay"></div>
+            <div class="content-block searchbar-not-found">
+                <p>Tidak ditemukan pesan yang dicari</p>
+            </div>
+            <div class="tabs">
+                <div id="inbox" class="tab active">
+                    <div class="list-block media-list inbox-list list-block-search searchbar-found"></div>
+                </div>
+                <div id="dispIn" class="tab">
+                    <div class="list-block media-list disposition-in-list list-block-search searchbar-found"></div>
+                </div>
+            </div>
+        </div>
+        <div class="toolbar tabbar">
+            <div class="toolbar-inner">
+                <a class="tab-link active" href="#inbox">Kotak Masuk</a>
+                <a class="tab-link" href="#dispIn">Disposisi</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.layout-dark .page,
+.layout-dark .login-screen-content,
+.page.layout-dark {
+  background-color: #222426;
+  color: #dddddd;
+}
+.layout-dark .panel,
+.panel.layout-dark {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.layout-white .page,
+.layout-white .login-screen-content,
+.page.layout-white {
+  background-color: #ffffff;
+  color: #000000;
+}
+.layout-white .panel,
+.panel.layout-white {
+  background-color: #222426;
+  color: #dddddd;
+}

@@ -1,0 +1,41 @@
+<div class="pages navbar-fixed">
+    <div data-page="sentboxes" class="page with-subnavbar">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="link back"><i class="material-icons">&#xE5C4;</i></a>
+                </div>
+                <div class="center">Komponen Terkirim</div>
+            </div>
+        </div>
+        <!-- Search bar -->
+        <form data-search-list=".list-block-search" data-search-in="a" class="searchbar searchbar-init">
+            <div class="searchbar-input">
+                <input name="search" type="search" placeholder="Cari surat terkirim" />
+                <a href="#" class="searchbar-clear"></a>
+            </div>
+        </form>
+        <div class="speed-dial">
+            <a href="#" class="floating-button color-lightgreen"><i class="material-icons">&#xE145;</i><i class="material-icons">&#xE5CD;</i></a>
+            <div class="speed-dial-buttons">
+                <a href="memo-form.html" class="color-lightgreen" data-force="true"><i class="material-icons">&#xE89c;</i></a>
+                <a href="mail-form.html" class="color-lightgreen" data-force="true"><i class="material-icons">&#xE158;</i></a>
+            </div>
+        </div>
+        <!-- Search bar overlay -->
+        <div class="searchbar-overlay"></div>
+        <!-- Scrollable page content-->
+        <!-- <div class="page-content infinite-scroll"> -->
+        <div class="page-content">
+            <!-- This block will be displayed if nothing found -->
+            <div class="content-block searchbar-not-found">
+                <p>Tidak ditemukan surat terkirim yang dicari</p>
+            </div>
+            <!-- <div class="list-block media-list disposition-out-list virtual-list list-block-search searchbar-found"></div> -->
+            <div class="list-block media-list disposition-out-list list-block-search searchbar-found"></div>
+            <!-- <div class="infinite-scroll-preloader">
+                <div class="preloader"></div>
+            </div> -->
+        </div>
+    </div>
+</div>

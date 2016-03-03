@@ -1,0 +1,194 @@
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+p {
+    text-align: justify;
+}
+
+.file-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.file-button input {
+    font-size: 10000px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.navbar-fixed .toolbar-fixed .page-content {
+    padding-top: 68px;
+}
+
+.popover {
+    width: 200px;
+}
+
+
+/* Your app custom files in this file */
+
+.view-left {
+    border-right: 1px solid #b2b2b2;
+}
+
+.list-block.media-list .item-media {
+    display: none;
+}
+
+.list-block .item-media + .item-inner {
+    margin-left: 0px;
+}
+
+.list-block .unread {
+    font-weight: bold;
+}
+
+.list-block .unread .item-after {
+    color: #2196F3;
+}
+
+.list-block .unread .item-after i {
+    color: #000;
+}
+
+.list-block .unread .item-text {
+    font-weight: normal;
+}
+
+.list-block .item-after {
+    text-align: left;
+    white-space: pre-line;
+    min-height: 28px;
+}
+
+.navbar a.link {
+    padding: 0px;
+}
+
+
+/* This will fix flicker navbar in left panel view */
+
+.panel-left .navbar {
+    position: relative;
+    margin-bottom: -44px;
+}
+
+.middle-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-right: -50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.middle-center p {
+    text-align: center;
+}
+
+
+/* Because we have panels-overlay inside of .views we need to fix its open position for right panel */
+
+body.with-panel-right-reveal .panel-overlay {
+    margin-left: 0;
+}
+
+.list-block ul ul {
+    padding-left: 0px;
+}
+
+.list-block .media-list .item-link .item-inner {
+    padding-right: 10px;
+    background-image: none;
+}
+
+.list-block .item-after i {
+    /*padding-left: 13px;*/
+    padding-right: 13px;
+}
+
+.list-block .item-subtitle span {
+    margin-right: 6px;
+}
+
+.list-block.media-list .item-link .item-title-row {
+    padding-right: 0px;
+    background: none; 
+}
+
+.tabbar-labels a.link {
+    padding-top: 0px;
+}
+
+.infinite-scroll-preloader {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.infinite-scroll-preloader .preloader {
+    width: 34px;
+    height: 34px;
+}
+/* iPad Vertical */
+
+@media (min-width: 569px) {
+    .panel.panel-left.panel-cover {
+        width: 320px;
+        left: -320px;
+    }
+    body.with-panel-left-cover .panel-left {
+        -webkit-transform: translate3d(320px, 0, 0);
+        -ms-transform: translate3d(320px, 0, 0);
+        transform: translate3d(320px, 0, 0);
+    }
+}
+
+
+/* iPad Horizontal */
+
+@media (min-width: 769px) {
+    body .panel.panel-left.panel-cover {
+        left: 0;
+        width: 320px;
+        display: block;
+    }
+    body.with-panel-left-cover .panel-left {
+        -webkit-transform: translate3d(0px, 0, 0);
+        -ms-transform: translate3d(0px, 0, 0);
+        transform: translate3d(0px, 0, 0);
+    }
+    .view-main {
+        float: right;
+        width: -webkit-calc(100% - 320px);
+        width: -moz-calc(100% - 320px);
+        width: -ms-calc(100% - 320px);
+        width: calc(100% - 320px);
+    }
+    /* Let's hide panel-opener when left panel is visible */
+    .view-main .navbar .open-panel {
+        display: none;
+    }
+    .view-left .navbar .close-panel {
+        display: none;
+    }
+    .navbar-through .page > .searchbar ~ .page-content {
+        padding-top: 44px;
+    }
+    .panel-left .page {
+        /*padding-top: 44px;*/
+        margin-top: 0px;
+    }
+    .list-block.media-list .item-media {
+        display: block;
+    }
+    .list-block .item-media + .item-inner {
+        margin-left: 16px;
+    }
+    .navbar a.link {
+        padding: 0px 16px;
+    }
+}

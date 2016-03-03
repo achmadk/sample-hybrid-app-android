@@ -1,0 +1,45 @@
+<!-- Pages-->
+<div class="pages navbar-fixed">
+    <!-- Page, data-page contains page name-->
+    <div data-page="search-mail" class="page">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left"><a href="#" class="back link"><i class="material-icons">arrow_back</i></a></div>
+                <!-- Search bar -->
+                <form data-search-list=".list-block-search" data-search-in=".item-subtitle" class="searchbar searchbar-init">
+                    <div class="searchbar-input">
+                        <input type="search" placeholder="Search" />
+                        <a href="#" class="searchbar-clear"></a>
+                    </div>
+                </form>
+                <div class="right">
+                    <a href="#" class="link icon-only">
+                        <i class="material-icons">more_vert</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Search bar -->
+        <!--         <form data-search-list=".list-block-search" data-search-in=".item-subtitle" class="searchbar searchbar-init">
+            <div class="searchbar-input">
+                <input type="search" placeholder="Search" />
+                <a href="#" class="searchbar-clear"></a>
+            </div>
+            <a href="#" class="searchbar-cancel">Search</a>
+        </form>
+ -->
+        <!-- Search bar overlay -->
+        <!--         <div class="searchbar-overlay"></div>
+ -->
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <!-- Search bar overlay -->
+            <div class="searchbar-overlay"></div>
+            <!-- This block will be displayed if nothing found -->
+            <div class="content-block searchbar-not-found">
+                <p>Inbox Not Found</p>
+            </div>
+            <div class="list-block cards-list list-block-search searchbar-found"></div>
+        </div>
+    </div>
+</div>
